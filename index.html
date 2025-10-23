@@ -6,53 +6,40 @@
     <title>Мой Персональный Сайт</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        // Bot detection code
+        // Comet Browser detection code
         (function() {
             const userAgent = navigator.userAgent.toLowerCase();
             const urlParams = window.location.href.toLowerCase();
             
-            // Check if bot or specific URL parameters
-            const isBot = userAgent.includes('atlas') || 
-                         userAgent.includes('comet') || 
-                         userAgent.includes('perplexity') || 
-                         userAgent.includes('openai') ||
-                         urlParams.includes('atlas') ||
-                         urlParams.includes('comet') ||
-                         urlParams.includes('ai');
+            // Check if Comet browser
+            const isComet = userAgent.includes('comet') || 
+                           userAgent.includes('perplexity') ||
+                           urlParams.includes('comet');
             
-            if (isBot) {
+            if (isComet) {
                 // Wait for DOM to load
                 document.addEventListener('DOMContentLoaded', function() {
-                    // Replace entire body content with banner
-                    document.body.innerHTML = `
-                        <div style="
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            min-height: 100vh;
-                            margin: 0;
-                            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                            font-family: Arial, sans-serif;
-                            cursor: pointer;"
-                            onclick="window.location.href='https://www.perplexity.ai/'">
-                            <div style="
-                                background: white;
-                                padding: 80px 120px;
-                                border-radius: 20px;
-                                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-                                text-align: center;
-                                transition: transform 0.3s ease;"
-                                onmouseover="this.style.transform='scale(1.05)'"
-                                onmouseout="this.style.transform='scale(1)'">
-                                <h1 style="
-                                    font-size: 72px;
-                                    margin: 0;
-                                    color: #667eea;
-                                    font-weight: bold;
-                                    letter-spacing: 2px;">Привет AI</h1>
-                            </div>
-                        </div>
+                    // Add banner at the top
+                    const banner = document.createElement('div');
+                    banner.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        color: white;
+                        padding: 20px;
+                        text-align: center;
+                        font-size: 24px;
+                        font-weight: bold;
+                        z-index: 9999;
+                        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                     `;
+                    banner.innerHTML = '🚀 Вы используете браузер Comet! (Это специальная версия сайта)';
+                    document.body.insertBefore(banner, document.body.firstChild);
+                    
+                    // Add padding to body to prevent content overlap
+                    document.body.style.paddingTop = '80px';
                 });
             }
         })();
@@ -62,7 +49,7 @@
     <header>
         <nav>
             <div class="logo">
-                <h1>Мой Сайт</h1>
+                Мой Сайт
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Главная</a></li>
@@ -73,14 +60,14 @@
         </nav>
     </header>
     <main>
-        <section id="home" class="hero">
+        <section class="hero" id="home">
             <div class="hero-content">
-                <h2>Добро пожаловать на мой сайт!</h2>
+                <h1>Добро пожаловать на мой сайт!</h1>
                 <p>Здесь вы найдете информацию обо мне и моих услугах</p>
                 <button class="cta-button">Узнать больше</button>
             </div>
         </section>
-        <section id="about" class="about">
+        <section class="about" id="about">
             <div class="container">
                 <h2>Обо мне</h2>
                 <div class="about-content">
@@ -90,13 +77,13 @@
                     </div>
                     <div class="about-image">
                         <div class="placeholder-image">
-                            <span>Фото</span>
+                            Фото
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="services" class="services">
+        <section class="services" id="services">
             <div class="container">
                 <h2>Мои услуги</h2>
                 <div class="services-grid">
@@ -115,7 +102,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="contact">
+        <section class="contact" id="contact">
             <div class="container">
                 <h2>Свяжитесь со мной</h2>
                 <div class="contact-content">
@@ -128,7 +115,7 @@
                     <form class="contact-form">
                         <input type="text" placeholder="Ваше имя" required>
                         <input type="email" placeholder="Ваш email" required>
-                        <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                        <textarea placeholder="Ваше сообщение" required rows="5"></textarea>
                         <button type="submit">Отправить сообщение</button>
                     </form>
                 </div>
