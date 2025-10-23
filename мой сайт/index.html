@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Персональный Сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Мой Сайт</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Добро пожаловать на мой сайт!</h2>
+                <p>Здесь вы найдете информацию обо мне и моих услугах</p>
+                <button class="cta-button">Узнать больше</button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Обо мне</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Привет! Меня зовут [Ваше имя], и я рад приветствовать вас на своем сайте. Здесь я делюсь своими знаниями, опытом и услугами.</p>
+                        <p>Я специализируюсь на создании качественных решений для ваших задач и всегда готов помочь.</p>
+                    </div>
+                    <div class="about-image">
+                        <div class="placeholder-image">
+                            <span>Фото</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Мои услуги</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Консультации</h3>
+                        <p>Профессиональные консультации по различным вопросам</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Разработка</h3>
+                        <p>Создание веб-сайтов и приложений</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Поддержка</h3>
+                        <p>Техническая поддержка и сопровождение проектов</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Свяжитесь со мной</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Контактная информация</h3>
+                        <p>📧 Email: your.email@example.com</p>
+                        <p>📱 Телефон: +7 (XXX) XXX-XX-XX</p>
+                        <p>📍 Адрес: Ваш город, Россия</p>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="email" placeholder="Ваш email" required>
+                        <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                        <button type="submit">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Мой Сайт. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
