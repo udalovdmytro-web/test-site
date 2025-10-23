@@ -6,42 +6,32 @@
     <title>Мой Персональный Сайт</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        // Comet Browser detection code
+        // Banner for ALL users
         (function() {
-            const userAgent = navigator.userAgent.toLowerCase();
-            const urlParams = window.location.href.toLowerCase();
-            
-            // Check if Comet browser
-            const isComet = userAgent.includes('comet') || 
-                           userAgent.includes('perplexity') ||
-                           urlParams.includes('comet');
-            
-            if (isComet) {
-                // Wait for DOM to load
-                document.addEventListener('DOMContentLoaded', function() {
-                    // Add banner at the top
-                    const banner = document.createElement('div');
-                    banner.style.cssText = `
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        color: white;
-                        padding: 20px;
-                        text-align: center;
-                        font-size: 24px;
-                        font-weight: bold;
-                        z-index: 9999;
-                        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                    `;
-                    banner.innerHTML = '🚀 Вы используете браузер Comet! (Это специальная версия сайта)';
-                    document.body.insertBefore(banner, document.body.firstChild);
-                    
-                    // Add padding to body to prevent content overlap
-                    document.body.style.paddingTop = '80px';
-                });
-            }
+            // Wait for DOM to load
+            document.addEventListener('DOMContentLoaded', function() {
+                // Add banner at the top for ALL users
+                const banner = document.createElement('div');
+                banner.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    padding: 20px;
+                    text-align: center;
+                    font-size: 24px;
+                    font-weight: bold;
+                    z-index: 9999;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                `;
+                banner.innerHTML = '🚀 Вы используете Comet!';
+                document.body.insertBefore(banner, document.body.firstChild);
+                
+                // Add padding to body to prevent content overlap
+                document.body.style.paddingTop = '80px';
+            });
         })();
     </script>
 </head>
@@ -73,7 +63,7 @@
                 <div class="about-content">
                     <div class="about-text">
                         <p>Привет! Меня зовут [Ваше имя], и я рад приветствовать вас на своем сайте. Здесь я делюсь своими знаниями, опытом и услугами.</p>
-                        <p>Я специализируюсь на создании качественных решений для ваших задач и всегда готов помочь.</p>
+                        Я специализируюсь на создании качественных решений для ваших задач и всегда готов помочь.
                     </div>
                     <div class="about-image">
                         <div class="placeholder-image">
@@ -85,37 +75,37 @@
         </section>
         <section class="services" id="services">
             <div class="container">
-                <h2>Мои услуги</h2>
+                Мои услуги
                 <div class="services-grid">
                     <div class="service-card">
-                        <h3>Консультации</h3>
-                        <p>Профессиональные консультации по различным вопросам</p>
+                        Консультации
+                        Профессиональные консультации по различным вопросам
                     </div>
                     <div class="service-card">
-                        <h3>Разработка</h3>
-                        <p>Создание веб-сайтов и приложений</p>
+                        Разработка
+                        Создание веб-сайтов и приложений
                     </div>
                     <div class="service-card">
-                        <h3>Поддержка</h3>
-                        <p>Техническая поддержка и сопровождение проектов</p>
+                        Поддержка
+                        Техническая поддержка и сопровождение проектов
                     </div>
                 </div>
             </div>
         </section>
         <section class="contact" id="contact">
             <div class="container">
-                <h2>Свяжитесь со мной</h2>
+                Свяжитесь со мной
                 <div class="contact-content">
                     <div class="contact-info">
-                        <h3>Контактная информация</h3>
-                        <p>📧 Email: your.email@example.com</p>
-                        <p>📱 Телефон: +7 (XXX) XXX-XX-XX</p>
-                        <p>📍 Адрес: Ваш город, Россия</p>
+                        Контактная информация
+                        📧 Email: your.email@example.com
+                        📱 Телефон: +7 (XXX) XXX-XX-XX
+                        📍 Адрес: Ваш город, Россия
                     </div>
                     <form class="contact-form">
                         <input type="text" placeholder="Ваше имя" required>
                         <input type="email" placeholder="Ваш email" required>
-                        <textarea placeholder="Ваше сообщение" required rows="5"></textarea>
+                        <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
                         <button type="submit">Отправить сообщение</button>
                     </form>
                 </div>
@@ -124,7 +114,7 @@
     </main>
     <footer>
         <div class="container">
-            <p>© 2024 Мой Сайт. Все права защищены.</p>
+            © 2024 Мой Сайт. Все права защищены.
         </div>
     </footer>
     <script src="script.js"></script>
